@@ -1,0 +1,3 @@
+eq:binom
+bookdown-notes
+number-and-reference-equations
