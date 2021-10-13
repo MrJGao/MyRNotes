@@ -8,6 +8,8 @@ output:
   #bookdown::pdf_book: default
 ---
 
+# Introduction
+
 This is a place where I store some useful R notes and tips, especially for making figures in R. I may create some text my own or just copy from other places and label the origins. 
 
 To write this document, I refered [Authoring Books with R Markdown](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html). So, thanks to the authors who created `bookdown` and wrote the awesome tutorials.

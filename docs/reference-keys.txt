@@ -1,3 +1,4 @@
 eq:binom
+introduction
 bookdown-notes
 number-and-reference-equations
