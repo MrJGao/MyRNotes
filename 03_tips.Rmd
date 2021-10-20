@@ -1,0 +1,16 @@
+# Manipulating Dates
+
+## Day of year (DOY) to Date
+
+```{r}
+# note that R uses a 0 based index for dates only
+# this means it starts counting at 0 rather than 1 when working with dates
+as.Date(0, origin = "2016-01-01")
+
+# note that R uses a 0 based index
+as.Date(1, origin = "2016-01-01")
+
+# figure out the date for day 189
+as.Date(189, origin = "2016-01-01")
+```
+

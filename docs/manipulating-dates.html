@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Some R Notes</title>
-  <meta name="description" content="Some R Notes" />
+  <title>Chapter 3 Manipulating Dates | Some R Notes</title>
+  <meta name="description" content="Chapter 3 Manipulating Dates | Some R Notes" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Some R Notes" />
+  <meta property="og:title" content="Chapter 3 Manipulating Dates | Some R Notes" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Some R Notes" />
+  <meta name="twitter:title" content="Chapter 3 Manipulating Dates | Some R Notes" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="bookdown-notes.html"/>
 
-<link rel="next" href="bookdown-notes.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -158,23 +158,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Some R Notes</h1>
-<p class="author"><em>Xiaojie Gao</em></p>
-</div>
-<div id="introduction" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<p>This is a place where I store some useful R notes and tips, especially for making figures in R. I may create some text my own or just copy from other places and label the origins.</p>
-<p>To write this document, I refered <a href="https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html">Authoring Books with R Markdown</a>. So, thanks to the authors who created <code>bookdown</code> and wrote the awesome tutorials.</p>
+<div id="manipulating-dates" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Manipulating Dates</h1>
+<div id="day-of-year-doy-to-date" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Day of year (DOY) to Date</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="manipulating-dates.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># note that R uses a 0 based index for dates only</span></span>
+<span id="cb2-2"><a href="manipulating-dates.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># this means it starts counting at 0 rather than 1 when working with dates</span></span>
+<span id="cb2-3"><a href="manipulating-dates.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">as.Date</span>(<span class="dv">0</span>, <span class="at">origin =</span> <span class="st">&quot;2016-01-01&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2016-01-01&quot;</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="manipulating-dates.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># note that R uses a 0 based index</span></span>
+<span id="cb4-2"><a href="manipulating-dates.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.Date</span>(<span class="dv">1</span>, <span class="at">origin =</span> <span class="st">&quot;2016-01-01&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2016-01-02&quot;</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="manipulating-dates.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># figure out the date for day 189</span></span>
+<span id="cb6-2"><a href="manipulating-dates.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.Date</span>(<span class="dv">189</span>, <span class="at">origin =</span> <span class="st">&quot;2016-01-01&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2016-07-08&quot;</code></pre>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="bookdown-notes.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="bookdown-notes.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
