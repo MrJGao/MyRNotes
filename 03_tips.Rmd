@@ -1,6 +1,8 @@
-# Manipulating Dates
+# General tips about R programming
 
-## Day of year (DOY) to Date
+## Manipulating Dates
+
+### Day of year (DOY) to Date
 
 ```{r}
 # note that R uses a 0 based index for dates only
@@ -15,5 +17,5 @@ as.Date(189, origin = "2016-01-01")
 ```
 
 
-# data.table
+## data.table
 [Frequently Asked Questions about data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-faq.html)

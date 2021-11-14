@@ -2,6 +2,7 @@ eq:binom
 introduction
 bookdown-notes
 number-and-reference-equations
+general-tips-about-r-programming
 manipulating-dates
 day-of-year-doy-to-date
 data.table

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Some R Notes</title>
-  <meta name="description" content="Page not found | Some R Notes" />
+  <title>Chapter 3 General tips about R programming | Some R Notes</title>
+  <meta name="description" content="Chapter 3 General tips about R programming | Some R Notes" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Some R Notes" />
+  <meta property="og:title" content="Chapter 3 General tips about R programming | Some R Notes" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Some R Notes" />
+  <meta name="twitter:title" content="Chapter 3 General tips about R programming | Some R Notes" />
   
   
   
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="bookdown-notes.html"/>
 
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -162,18 +162,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="general-tips-about-r-programming" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> General tips about R programming</h1>
+<div id="manipulating-dates" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Manipulating Dates</h2>
+<div id="day-of-year-doy-to-date" class="section level3" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Day of year (DOY) to Date</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="general-tips-about-r-programming.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># note that R uses a 0 based index for dates only</span></span>
+<span id="cb2-2"><a href="general-tips-about-r-programming.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># this means it starts counting at 0 rather than 1 when working with dates</span></span>
+<span id="cb2-3"><a href="general-tips-about-r-programming.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">as.Date</span>(<span class="dv">0</span>, <span class="at">origin =</span> <span class="st">&quot;2016-01-01&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2016-01-01&quot;</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="general-tips-about-r-programming.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># note that R uses a 0 based index</span></span>
+<span id="cb4-2"><a href="general-tips-about-r-programming.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.Date</span>(<span class="dv">1</span>, <span class="at">origin =</span> <span class="st">&quot;2016-01-01&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2016-01-02&quot;</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="general-tips-about-r-programming.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># figure out the date for day 189</span></span>
+<span id="cb6-2"><a href="general-tips-about-r-programming.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.Date</span>(<span class="dv">189</span>, <span class="at">origin =</span> <span class="st">&quot;2016-01-01&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2016-07-08&quot;</code></pre>
+</div>
+</div>
+<div id="data.table" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> data.table</h2>
+<p><a href="https://cran.r-project.org/web/packages/data.table/vignettes/datatable-faq.html">Frequently Asked Questions about data.table</a></p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
+<a href="bookdown-notes.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
