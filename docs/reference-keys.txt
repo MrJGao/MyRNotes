@@ -4,3 +4,4 @@ bookdown-notes
 number-and-reference-equations
 manipulating-dates
 day-of-year-doy-to-date
+data.table
