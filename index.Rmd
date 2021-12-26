@@ -1,6 +1,6 @@
 ---
 title: "Some R Notes"
-author: "Xiaojie Gao"
+author: "Xiaojie(J) Gao"
 site: bookdown::bookdown_site
 documentclass: book
 output:
