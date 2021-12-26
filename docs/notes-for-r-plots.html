@@ -140,7 +140,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html#data.table"><i class="fa fa-check"></i><b>3.2</b> data.table</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="notes-for-r-plots.html"><a href="notes-for-r-plots.html"><i class="fa fa-check"></i><b>4</b> Notes for R plots</a><ul>
-<li class="chapter" data-level="4.1" data-path="notes-for-r-plots.html"><a href="notes-for-r-plots.html#plotting-rasters-using-raster-package"><i class="fa fa-check"></i><b>4.1</b> Plotting rasters using <code>raster</code> package</a></li>
+<li class="chapter" data-level="4.1" data-path="notes-for-r-plots.html"><a href="notes-for-r-plots.html#plotting-rasters-using-raster-package"><i class="fa fa-check"></i><b>4.1</b> Plotting rasters using <code>raster</code> package</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="notes-for-r-plots.html"><a href="notes-for-r-plots.html#arguments-for-plotting-rasters"><i class="fa fa-check"></i><b>4.1.1</b> Arguments for plotting rasters</a></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -164,7 +166,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="plotting-rasters-using-raster-package" class="section level2">
 <h2><span class="header-section-number">4.1</span> Plotting rasters using <code>raster</code> package</h2>
 <p>This section refered <a href="https://mmeredith.net/blog/2019/plotting_rasters.htm">this website</a></p>
+<div id="arguments-for-plotting-rasters" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Arguments for plotting rasters</h3>
+<p>The arguments used in <code>raster</code> package’s <code>plot</code> function:</p>
+<div class="figure">
+<img src="resource/raster_plot_args.png" alt="raster plot arguments" />
+<p class="caption">raster plot arguments</p>
+</div>
+<p>Common tweaks:</p>
+<div class="figure">
+<img src="resource/raster_plot_tweaks.png" alt="raster plot tweaks" />
+<p class="caption">raster plot tweaks</p>
+</div>
+<p>The <code>plot</code> function also supports:
+- Horizontal legend bar
+- Zooming in to an extent of the raster
+- Interpolation of the raster plot
+- Use <code>zlim</code> to plot several raster images with the same scale and a single legend</p>
+<p>Additionally, <code>rasterVis</code> package provides useful raster plotting functions (check <a href="https://oscarperpinan.github.io/rastervis/">this website</a>).</p>
 
+</div>
 </div>
 </div>
             </section>
