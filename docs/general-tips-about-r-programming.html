@@ -21,7 +21,7 @@
   
   
 
-<meta name="author" content="Xiaojie Gao" />
+<meta name="author" content="Xiaojie(J) Gao" />
 
 
 
@@ -31,8 +31,7 @@
   
   
 <link rel="prev" href="bookdown-notes.html"/>
-
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<link rel="next" href="notes-for-r-plots.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -55,27 +54,25 @@
 
 
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -84,9 +81,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -133,17 +130,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="bookdown-notes.html"><a href="bookdown-notes.html"><i class="fa fa-check"></i><b>2</b> Bookdown Notes</a>
-<ul>
+<li class="chapter" data-level="2" data-path="bookdown-notes.html"><a href="bookdown-notes.html"><i class="fa fa-check"></i><b>2</b> Bookdown Notes</a><ul>
 <li class="chapter" data-level="2.1" data-path="bookdown-notes.html"><a href="bookdown-notes.html#number-and-reference-equations"><i class="fa fa-check"></i><b>2.1</b> Number and reference equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html"><i class="fa fa-check"></i><b>3</b> General tips about R programming</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html#manipulating-dates"><i class="fa fa-check"></i><b>3.1</b> Manipulating Dates</a>
-<ul>
+<li class="chapter" data-level="3" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html"><i class="fa fa-check"></i><b>3</b> General tips about R programming</a><ul>
+<li class="chapter" data-level="3.1" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html#manipulating-dates"><i class="fa fa-check"></i><b>3.1</b> Manipulating Dates</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html#day-of-year-doy-to-date"><i class="fa fa-check"></i><b>3.1.1</b> Day of year (DOY) to Date</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html#data.table"><i class="fa fa-check"></i><b>3.2</b> data.table</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="notes-for-r-plots.html"><a href="notes-for-r-plots.html"><i class="fa fa-check"></i><b>4</b> Notes for R plots</a><ul>
+<li class="chapter" data-level="4.1" data-path="notes-for-r-plots.html"><a href="notes-for-r-plots.html#plotting-rasters-using-raster-package"><i class="fa fa-check"></i><b>4.1</b> Plotting rasters using <code>raster</code> package</a></li>
 </ul></li>
 </ul>
 
@@ -162,25 +159,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="general-tips-about-r-programming" class="section level1" number="3">
+<div id="general-tips-about-r-programming" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> General tips about R programming</h1>
-<div id="manipulating-dates" class="section level2" number="3.1">
+<div id="manipulating-dates" class="section level2">
 <h2><span class="header-section-number">3.1</span> Manipulating Dates</h2>
-<div id="day-of-year-doy-to-date" class="section level3" number="3.1.1">
+<div id="day-of-year-doy-to-date" class="section level3">
 <h3><span class="header-section-number">3.1.1</span> Day of year (DOY) to Date</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="general-tips-about-r-programming.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># note that R uses a 0 based index for dates only</span></span>
-<span id="cb2-2"><a href="general-tips-about-r-programming.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># this means it starts counting at 0 rather than 1 when working with dates</span></span>
-<span id="cb2-3"><a href="general-tips-about-r-programming.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">as.Date</span>(<span class="dv">0</span>, <span class="at">origin =</span> <span class="st">&quot;2016-01-01&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># note that R uses a 0 based index for dates only</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co"># this means it starts counting at 0 rather than 1 when working with dates</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw">as.Date</span>(<span class="dv">0</span>, <span class="dt">origin =</span> <span class="st">&quot;2016-01-01&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;2016-01-01&quot;</code></pre>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="general-tips-about-r-programming.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># note that R uses a 0 based index</span></span>
-<span id="cb4-2"><a href="general-tips-about-r-programming.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.Date</span>(<span class="dv">1</span>, <span class="at">origin =</span> <span class="st">&quot;2016-01-01&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># note that R uses a 0 based index</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw">as.Date</span>(<span class="dv">1</span>, <span class="dt">origin =</span> <span class="st">&quot;2016-01-01&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;2016-01-02&quot;</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="general-tips-about-r-programming.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># figure out the date for day 189</span></span>
-<span id="cb6-2"><a href="general-tips-about-r-programming.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.Date</span>(<span class="dv">189</span>, <span class="at">origin =</span> <span class="st">&quot;2016-01-01&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="co"># figure out the date for day 189</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="kw">as.Date</span>(<span class="dv">189</span>, <span class="dt">origin =</span> <span class="st">&quot;2016-01-01&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;2016-07-08&quot;</code></pre>
 </div>
 </div>
-<div id="data.table" class="section level2" number="3.2">
+<div id="data.table" class="section level2">
 <h2><span class="header-section-number">3.2</span> data.table</h2>
 <p><a href="https://cran.r-project.org/web/packages/data.table/vignettes/datatable-faq.html">Frequently Asked Questions about data.table</a></p>
 
@@ -191,8 +188,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="bookdown-notes.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="bookdown-notes.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="notes-for-r-plots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
