@@ -39,7 +39,7 @@ I copied the some example code from: [R: Monitoring the function progress with a
 
 Text based progress bar:
 
-```{r}
+```{r, eval=FALSE}
 total <- 20
 # create progress bar
 pb <- txtProgressBar(min = 0, max = total, style = 3)
@@ -53,7 +53,7 @@ close(pb)
 
 A GUI progress bar from `tcltk` package:
 
-```{r}
+```{r, eval=FALSE}
 total <- 20
 # create progress bar
 pb <- tcltk::tkProgressBar(
@@ -73,7 +73,7 @@ close(pb)
 
 A progress bar using the Windows operating system:
 
-```{r}
+```{r, eval=FALSE}
 total <- 20
 # create progress bar
 pb <- winProgressBar(
