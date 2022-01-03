@@ -11,3 +11,6 @@ progress-bar
 notes-for-r-plots
 plotting-rasters-using-raster-package
 arguments-for-plotting-rasters
+model-resouces
+st-590-code-website
+glmm-faq

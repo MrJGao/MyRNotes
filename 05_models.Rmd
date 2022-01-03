@@ -1,0 +1,10 @@
+# Model resouces
+
+## ST 590 code website
+
+https://krgross.github.io/bma590-course-notes/
+
+## GLMM FAQ
+
+[A useful website for Generalized Linear Mixed Model (GLMM) FAQ by Ben Bolker et al](https://bbolker.github.io/mixedmodels-misc/glmmFAQ.html).
+
