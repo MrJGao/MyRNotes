@@ -19,3 +19,75 @@ as.Date(189, origin = "2016-01-01")
 
 ## data.table
 [Frequently Asked Questions about data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-faq.html)
+
+
+## title?
+
+Add leading/ending zeros to a number, it can be done using `formatC` and `sprintf`.
+
+```{r}
+num <- c(0, 1, 10, 1.1, 2.34)
+
+formatC(num, width = 4, format = "d", flag = "0")
+formatC(num, digits = 3, format = "f", flag = "0")
+```
+
+
+## Progress bar
+
+I copied the some example code from: [R: Monitoring the function progress with a progress bar](https://ryouready.wordpress.com/2009/03/16/r-monitor-function-progress-with-a-progress-bar/)
+
+Text based progress bar:
+
+```{r}
+total <- 20
+# create progress bar
+pb <- txtProgressBar(min = 0, max = total, style = 3)
+for (i in 1:total) {
+    Sys.sleep(0.1)
+    # update progress bar
+    setTxtProgressBar(pb, i)
+}
+close(pb)
+```
+
+A GUI progress bar from `tcltk` package:
+
+```{r}
+total <- 20
+# create progress bar
+pb <- tcltk::tkProgressBar(
+    title = "progress bar", min = 0,
+    max = total, width = 300
+)
+
+for (i in 1:total) {
+    Sys.sleep(0.1)
+    tcltk::setTkProgressBar(pb, i, label = paste(
+        round(i / total * 100, 0),
+        "% done"
+    ))
+}
+close(pb)
+```
+
+A progress bar using the Windows operating system:
+
+```{r}
+total <- 20
+# create progress bar
+pb <- winProgressBar(
+    title = "progress bar", 
+    label = "Progress", # must provide label here, otherwise it won't show in the update label
+    min = 0, max = total, width = 300
+)
+
+for (i in 1:total) {
+    Sys.sleep(0.1)
+    setWinProgressBar(pb, i, label = paste(
+        round(i / total * 100, 0),
+        "% done"
+    ))
+}
+close(pb)
+```
