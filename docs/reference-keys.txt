@@ -6,6 +6,8 @@ general-tips-about-r-programming
 manipulating-dates
 day-of-year-doy-to-date
 data.table
+title
+progress-bar
 notes-for-r-plots
 plotting-rasters-using-raster-package
 arguments-for-plotting-rasters

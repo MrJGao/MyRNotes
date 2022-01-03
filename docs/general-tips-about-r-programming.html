@@ -138,6 +138,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1.1" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html#day-of-year-doy-to-date"><i class="fa fa-check"></i><b>3.1.1</b> Day of year (DOY) to Date</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html#data.table"><i class="fa fa-check"></i><b>3.2</b> data.table</a></li>
+<li class="chapter" data-level="3.3" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html#title"><i class="fa fa-check"></i><b>3.3</b> title?</a></li>
+<li class="chapter" data-level="3.4" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html#progress-bar"><i class="fa fa-check"></i><b>3.4</b> Progress bar</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="notes-for-r-plots.html"><a href="notes-for-r-plots.html"><i class="fa fa-check"></i><b>4</b> Notes for R plots</a><ul>
 <li class="chapter" data-level="4.1" data-path="notes-for-r-plots.html"><a href="notes-for-r-plots.html#plotting-rasters-using-raster-package"><i class="fa fa-check"></i><b>4.1</b> Plotting rasters using <code>raster</code> package</a><ul>
@@ -182,6 +184,108 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="data.table" class="section level2">
 <h2><span class="header-section-number">3.2</span> data.table</h2>
 <p><a href="https://cran.r-project.org/web/packages/data.table/vignettes/datatable-faq.html">Frequently Asked Questions about data.table</a></p>
+</div>
+<div id="title" class="section level2">
+<h2><span class="header-section-number">3.3</span> title?</h2>
+<p>Add leading/ending zeros to a number, it can be done using <code>formatC</code> and <code>sprintf</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">num &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">10</span>, <span class="fl">1.1</span>, <span class="fl">2.34</span>)</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="kw">formatC</span>(num, <span class="dt">width =</span> <span class="dv">4</span>, <span class="dt">format =</span> <span class="st">&quot;d&quot;</span>, <span class="dt">flag =</span> <span class="st">&quot;0&quot;</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;0000&quot; &quot;0001&quot; &quot;0010&quot; &quot;0001&quot; &quot;0002&quot;</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">formatC</span>(num, <span class="dt">digits =</span> <span class="dv">3</span>, <span class="dt">format =</span> <span class="st">&quot;f&quot;</span>, <span class="dt">flag =</span> <span class="st">&quot;0&quot;</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;0.000&quot;  &quot;1.000&quot;  &quot;10.000&quot; &quot;1.100&quot;  &quot;2.340&quot;</code></pre>
+</div>
+<div id="progress-bar" class="section level2">
+<h2><span class="header-section-number">3.4</span> Progress bar</h2>
+<p>I copied the some example code from: <a href="https://ryouready.wordpress.com/2009/03/16/r-monitor-function-progress-with-a-progress-bar/">R: Monitoring the function progress with a progress bar</a></p>
+<p>Text based progress bar:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">total &lt;-<span class="st"> </span><span class="dv">20</span></a>
+<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="co"># create progress bar</span></a>
+<a class="sourceLine" id="cb12-3" data-line-number="3">pb &lt;-<span class="st"> </span><span class="kw">txtProgressBar</span>(<span class="dt">min =</span> <span class="dv">0</span>, <span class="dt">max =</span> total, <span class="dt">style =</span> <span class="dv">3</span>)</a></code></pre></div>
+<pre><code>## 
+  |                                                                                                       
+  |                                                                                                 |   0%</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>total) {</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2">    <span class="kw">Sys.sleep</span>(<span class="fl">0.1</span>)</a>
+<a class="sourceLine" id="cb14-3" data-line-number="3">    <span class="co"># update progress bar</span></a>
+<a class="sourceLine" id="cb14-4" data-line-number="4">    <span class="kw">setTxtProgressBar</span>(pb, i)</a>
+<a class="sourceLine" id="cb14-5" data-line-number="5">}</a></code></pre></div>
+<pre><code>## 
+  |                                                                                                       
+  |=====                                                                                            |   5%
+  |                                                                                                       
+  |==========                                                                                       |  10%
+  |                                                                                                       
+  |===============                                                                                  |  15%
+  |                                                                                                       
+  |===================                                                                              |  20%
+  |                                                                                                       
+  |========================                                                                         |  25%
+  |                                                                                                       
+  |=============================                                                                    |  30%
+  |                                                                                                       
+  |==================================                                                               |  35%
+  |                                                                                                       
+  |=======================================                                                          |  40%
+  |                                                                                                       
+  |============================================                                                     |  45%
+  |                                                                                                       
+  |================================================                                                 |  50%
+  |                                                                                                       
+  |=====================================================                                            |  55%
+  |                                                                                                       
+  |==========================================================                                       |  60%
+  |                                                                                                       
+  |===============================================================                                  |  65%
+  |                                                                                                       
+  |====================================================================                             |  70%
+  |                                                                                                       
+  |=========================================================================                        |  75%
+  |                                                                                                       
+  |==============================================================================                   |  80%
+  |                                                                                                       
+  |==================================================================================               |  85%
+  |                                                                                                       
+  |=======================================================================================          |  90%
+  |                                                                                                       
+  |============================================================================================     |  95%
+  |                                                                                                       
+  |=================================================================================================| 100%</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw">close</span>(pb)</a></code></pre></div>
+<p>A GUI progress bar from <code>tcltk</code> package:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1">total &lt;-<span class="st"> </span><span class="dv">20</span></a>
+<a class="sourceLine" id="cb17-2" data-line-number="2"><span class="co"># create progress bar</span></a>
+<a class="sourceLine" id="cb17-3" data-line-number="3">pb &lt;-<span class="st"> </span>tcltk<span class="op">::</span><span class="kw">tkProgressBar</span>(</a>
+<a class="sourceLine" id="cb17-4" data-line-number="4">    <span class="dt">title =</span> <span class="st">&quot;progress bar&quot;</span>, <span class="dt">min =</span> <span class="dv">0</span>,</a>
+<a class="sourceLine" id="cb17-5" data-line-number="5">    <span class="dt">max =</span> total, <span class="dt">width =</span> <span class="dv">300</span></a>
+<a class="sourceLine" id="cb17-6" data-line-number="6">)</a>
+<a class="sourceLine" id="cb17-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb17-8" data-line-number="8"><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>total) {</a>
+<a class="sourceLine" id="cb17-9" data-line-number="9">    <span class="kw">Sys.sleep</span>(<span class="fl">0.1</span>)</a>
+<a class="sourceLine" id="cb17-10" data-line-number="10">    tcltk<span class="op">::</span><span class="kw">setTkProgressBar</span>(pb, i, <span class="dt">label =</span> <span class="kw">paste</span>(</a>
+<a class="sourceLine" id="cb17-11" data-line-number="11">        <span class="kw">round</span>(i <span class="op">/</span><span class="st"> </span>total <span class="op">*</span><span class="st"> </span><span class="dv">100</span>, <span class="dv">0</span>),</a>
+<a class="sourceLine" id="cb17-12" data-line-number="12">        <span class="st">&quot;% done&quot;</span></a>
+<a class="sourceLine" id="cb17-13" data-line-number="13">    ))</a>
+<a class="sourceLine" id="cb17-14" data-line-number="14">}</a>
+<a class="sourceLine" id="cb17-15" data-line-number="15"><span class="kw">close</span>(pb)</a></code></pre></div>
+<p>A progress bar using the Windows operating system:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">total &lt;-<span class="st"> </span><span class="dv">20</span></a>
+<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="co"># create progress bar</span></a>
+<a class="sourceLine" id="cb18-3" data-line-number="3">pb &lt;-<span class="st"> </span><span class="kw">winProgressBar</span>(</a>
+<a class="sourceLine" id="cb18-4" data-line-number="4">    <span class="dt">title =</span> <span class="st">&quot;progress bar&quot;</span>, </a>
+<a class="sourceLine" id="cb18-5" data-line-number="5">    <span class="dt">label =</span> <span class="st">&quot;Progress&quot;</span>, <span class="co"># must provide label here, otherwise it won&#39;t show in the update label</span></a>
+<a class="sourceLine" id="cb18-6" data-line-number="6">    <span class="dt">min =</span> <span class="dv">0</span>, <span class="dt">max =</span> total, <span class="dt">width =</span> <span class="dv">300</span></a>
+<a class="sourceLine" id="cb18-7" data-line-number="7">)</a>
+<a class="sourceLine" id="cb18-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb18-9" data-line-number="9"><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>total) {</a>
+<a class="sourceLine" id="cb18-10" data-line-number="10">    <span class="kw">Sys.sleep</span>(<span class="fl">0.1</span>)</a>
+<a class="sourceLine" id="cb18-11" data-line-number="11">    <span class="kw">setWinProgressBar</span>(pb, i, <span class="dt">label =</span> <span class="kw">paste</span>(</a>
+<a class="sourceLine" id="cb18-12" data-line-number="12">        <span class="kw">round</span>(i <span class="op">/</span><span class="st"> </span>total <span class="op">*</span><span class="st"> </span><span class="dv">100</span>, <span class="dv">0</span>),</a>
+<a class="sourceLine" id="cb18-13" data-line-number="13">        <span class="st">&quot;% done&quot;</span></a>
+<a class="sourceLine" id="cb18-14" data-line-number="14">    ))</a>
+<a class="sourceLine" id="cb18-15" data-line-number="15">}</a>
+<a class="sourceLine" id="cb18-16" data-line-number="16"><span class="kw">close</span>(pb)</a></code></pre></div>
+<pre><code>## NULL</code></pre>
 
 </div>
 </div>
