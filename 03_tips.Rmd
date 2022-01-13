@@ -2,7 +2,7 @@
 
 ## Manipulating Dates
 
-### Day of year (DOY) to Date
+### Day of year (DOY) and Date Conversion
 
 ```{r}
 # note that R uses a 0 based index for dates only
@@ -16,12 +16,21 @@ as.Date(1, origin = "2016-01-01")
 as.Date(189, origin = "2016-01-01")
 ```
 
+The [`lubridate`](https://lubridate.tidyverse.org/) package can make some conversions easier.
+
+```{r}
+lubridate::as_date("2021-01-01")
+
+# find today's the DOY
+lubridate::yday(Sys.time())
+```
+
 
 ## data.table
 [Frequently Asked Questions about data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-faq.html)
 
 
-## title?
+## Format numbers and digits
 
 Add leading/ending zeros to a number, it can be done using `formatC` and `sprintf`.
 
@@ -90,4 +99,21 @@ for (i in 1:total) {
     ))
 }
 close(pb)
+```
+
+## Dealing with files and paths
+
+```{r}
+filename <- "some_folder/some_example_file.txt"
+
+# get the file extension
+tools::file_ext(filename)
+
+# get the file name without extension
+tools::file_path_sans_ext(filename)
+tools::file_path_sans_ext(basename(filename))
+
+# get the file path.
+# it'll search for the file in the current working directory and return the full path.
+# tools::file_path_as_absolute(filename)
 ```

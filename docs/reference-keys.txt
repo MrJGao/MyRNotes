@@ -4,10 +4,11 @@ bookdown-notes
 number-and-reference-equations
 general-tips-about-r-programming
 manipulating-dates
-day-of-year-doy-to-date
+day-of-year-doy-and-date-conversion
 data.table
-title
+format-numbers-and-digits
 progress-bar
+dealing-with-files-and-paths
 notes-for-r-plots
 plotting-rasters-using-raster-package
 arguments-for-plotting-rasters
