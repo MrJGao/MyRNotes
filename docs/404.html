@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Page not found | Some R Notes</title>
   <meta name="description" content="Page not found | Some R Notes" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Page not found | Some R Notes" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -49,30 +48,33 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -81,9 +83,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -130,11 +132,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="bookdown-notes.html"><a href="bookdown-notes.html"><i class="fa fa-check"></i><b>2</b> Bookdown Notes</a><ul>
+<li class="chapter" data-level="2" data-path="bookdown-notes.html"><a href="bookdown-notes.html"><i class="fa fa-check"></i><b>2</b> Bookdown Notes</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="bookdown-notes.html"><a href="bookdown-notes.html#number-and-reference-equations"><i class="fa fa-check"></i><b>2.1</b> Number and reference equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html"><i class="fa fa-check"></i><b>3</b> General tips about R programming</a><ul>
-<li class="chapter" data-level="3.1" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html#manipulating-dates"><i class="fa fa-check"></i><b>3.1</b> Manipulating Dates</a><ul>
+<li class="chapter" data-level="3" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html"><i class="fa fa-check"></i><b>3</b> General tips about R programming</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html#manipulating-dates"><i class="fa fa-check"></i><b>3.1</b> Manipulating Dates</a>
+<ul>
 <li class="chapter" data-level="3.1.1" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html#day-of-year-doy-and-date-conversion"><i class="fa fa-check"></i><b>3.1.1</b> Day of year (DOY) and Date Conversion</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html#data.table"><i class="fa fa-check"></i><b>3.2</b> data.table</a></li>
@@ -142,12 +147,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html#progress-bar"><i class="fa fa-check"></i><b>3.4</b> Progress bar</a></li>
 <li class="chapter" data-level="3.5" data-path="general-tips-about-r-programming.html"><a href="general-tips-about-r-programming.html#dealing-with-files-and-paths"><i class="fa fa-check"></i><b>3.5</b> Dealing with files and paths</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="notes-for-r-plots.html"><a href="notes-for-r-plots.html"><i class="fa fa-check"></i><b>4</b> Notes for R plots</a><ul>
-<li class="chapter" data-level="4.1" data-path="notes-for-r-plots.html"><a href="notes-for-r-plots.html#plotting-rasters-using-raster-package"><i class="fa fa-check"></i><b>4.1</b> Plotting rasters using <code>raster</code> package</a><ul>
+<li class="chapter" data-level="4" data-path="notes-for-r-plots.html"><a href="notes-for-r-plots.html"><i class="fa fa-check"></i><b>4</b> Notes for R plots</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="notes-for-r-plots.html"><a href="notes-for-r-plots.html#plotting-rasters-using-raster-package"><i class="fa fa-check"></i><b>4.1</b> Plotting rasters using <code>raster</code> package</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="notes-for-r-plots.html"><a href="notes-for-r-plots.html#arguments-for-plotting-rasters"><i class="fa fa-check"></i><b>4.1.1</b> Arguments for plotting rasters</a></li>
 </ul></li>
+<li class="chapter" data-level="4.2" data-path="notes-for-r-plots.html"><a href="notes-for-r-plots.html#customize-the-appearance-of-plots"><i class="fa fa-check"></i><b>4.2</b> Customize the appearance of plots</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="notes-for-r-plots.html"><a href="notes-for-r-plots.html#axis"><i class="fa fa-check"></i><b>4.2.1</b> Axis</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="model-resouces.html"><a href="model-resouces.html"><i class="fa fa-check"></i><b>5</b> Model resouces</a><ul>
+</ul></li>
+<li class="chapter" data-level="5" data-path="model-resouces.html"><a href="model-resouces.html"><i class="fa fa-check"></i><b>5</b> Model resouces</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="model-resouces.html"><a href="model-resouces.html#st-590-code-website"><i class="fa fa-check"></i><b>5.1</b> ST 590 code website</a></li>
 <li class="chapter" data-level="5.2" data-path="model-resouces.html"><a href="model-resouces.html#glmm-faq"><i class="fa fa-check"></i><b>5.2</b> GLMM FAQ</a></li>
 </ul></li>

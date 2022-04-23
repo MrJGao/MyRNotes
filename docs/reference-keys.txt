@@ -12,6 +12,8 @@ dealing-with-files-and-paths
 notes-for-r-plots
 plotting-rasters-using-raster-package
 arguments-for-plotting-rasters
+customize-the-appearance-of-plots
+axis
 model-resouces
 st-590-code-website
 glmm-faq

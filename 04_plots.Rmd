@@ -23,3 +23,8 @@ The `plot` function also supports:
 Additionally, `rasterVis` package provides useful raster plotting functions (check [this website](https://oscarperpinan.github.io/rastervis/)).
 
 
+## Customize the appearance of plots
+
+### Axis
+
+Sometimes there's not enough space for R to show all axis labels, e.g., beacause the figure is too narrow, R would hide some axis labels but this is not we want. If the figure width/height can be changed or if the axis labels can be rotated using `las` parameter, that's fine. But sometimes, the labels are not long texts, we believe showing them all wouldn't make them overlap with each other. In this case, we could reduce the gap between labels to force R showing all axis labels. We can use `gap.axis` parameter to achieve this goal. `gap.axis` works for the manual `axis()` function as well as some plot functions such as `boxplot()`. Normally, I would use `gap.axis = 0.01` as the value to plot x axis labels.
